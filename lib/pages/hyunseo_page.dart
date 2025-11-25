@@ -3,6 +3,8 @@ import 'package:bubble/bubble.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HyeonseoPage extends StatelessWidget {
+  const HyeonseoPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,6 +35,8 @@ class HyeonseoPage extends StatelessWidget {
 }
 
 class HsProfile extends StatelessWidget {
+  const HsProfile({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -79,6 +83,8 @@ class HsProfile extends StatelessWidget {
 }
 
 class Bar extends StatelessWidget {
+  const Bar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -103,6 +109,8 @@ class Bar extends StatelessWidget {
 }
 
 class SkillList extends StatelessWidget {
+  const SkillList({super.key});
+
   @override
   Widget build(BuildContext context) {
     final double size = 45;
@@ -136,7 +144,11 @@ class SkillList extends StatelessWidget {
 }
 
 class GridImage extends StatelessWidget {
-  final List<String> images = [
+  const GridImage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final List<String> images = [
     'assets/hyunseo/hsprofile1_baseball.jpeg',
     'assets/hyunseo/hsprofile2_majong.jpeg',
     'assets/hyunseo/hsprofile3_meow.jpeg',
@@ -148,9 +160,6 @@ class GridImage extends StatelessWidget {
     'assets/hyunseo/figure9_art.jpeg',
     'assets/hyunseo/figure10_we.png',
   ];
-
-  @override
-  Widget build(BuildContext context) {
     return Expanded(
       child: GridView.builder(
         itemCount: images.length,
@@ -168,7 +177,7 @@ class GridImage extends StatelessWidget {
               builder: (_) => Dialog(
                 child: GestureDetector(
                   onTap: () => Navigator.of(context).pop(),
-                  child: Container(
+                  child: SizedBox(
                     child :Image.asset(images[index]),
                   ),
                 ),

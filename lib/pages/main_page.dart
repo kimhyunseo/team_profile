@@ -3,10 +3,12 @@ import 'package:team_profile/pages/Eunseong_Page.dart';
 import 'hyunseo_page.dart';
 
 class MainPage extends StatelessWidget {
-  final List<String> members = ['박진', '지은성', '김현서', '김영광'];
+  const MainPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<String> members = ['박진', '지은성', '김현서', '김영광'];
+    
     return Scaffold(
       appBar: AppBar(title: Text('우리 팀을 소개합니다!')),
       body: ListView.builder(
