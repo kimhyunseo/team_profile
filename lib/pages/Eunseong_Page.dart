@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_controller.dart';
 
 class EunseongPage extends StatelessWidget {
+  const EunseongPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
