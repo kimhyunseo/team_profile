@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_controller.dart';
 
 class EunseongPage extends StatelessWidget {
   @override
