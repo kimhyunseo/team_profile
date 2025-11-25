@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:team_profile/pages/Eunseong_Page.dart';
 import 'hyunseo_page.dart';
 
 class MainPage extends StatelessWidget {
@@ -17,7 +18,7 @@ class MainPage extends StatelessWidget {
             trailing: Icon(Icons.arrow_forward_ios, size: 16),
             onTap: () {
               switch (members[index]) {
-                // switch 문을 사용 
+                // switch 문을 사용
                 case '김현서':
                   Navigator.push(
                     context,
@@ -26,6 +27,11 @@ class MainPage extends StatelessWidget {
                   break;
                 // 들어오는 (members[index]) 값이 '김현서'일 경우 HyeonseoPage()로 이동
                 // 직접 연결하는 코드 작성해주세욤 ㅎㅎ
+                case '지은성':
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => EunseongPage()),
+                  );
               }
             },
           );
