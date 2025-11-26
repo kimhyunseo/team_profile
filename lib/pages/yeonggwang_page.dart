@@ -65,7 +65,7 @@ class _YeonggwangPage extends State<YeonggwangPage> {
                                     style:
                                         TextStyle(fontWeight: FontWeight.bold)),
                               ])),
-                      Container(
+                      SizedBox(
                         width: 100,
                         height: 100,
                         child: Row(
@@ -138,7 +138,7 @@ class _YeonggwangPage extends State<YeonggwangPage> {
 }
 
 class SubHeadingBar extends StatelessWidget {
-  final subTitle;
+  final String subTitle;
 
   const SubHeadingBar({super.key, required this.subTitle});
 
