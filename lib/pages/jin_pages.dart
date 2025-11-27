@@ -203,12 +203,55 @@ class JinPage extends StatelessWidget {
                     ],
                   ),
                   child: Text(
-                    "나는 박진, 30살입니다.\n(아직은 열정만 가득한 코딩 초보 학생) 👩🏻‍🎓\n\n제가 좋아하는걸 소개할게요.🌿\n저는 자연과 여행을 좋아합니다.🌎✈️",
+                    "나는 박진, 30살입니다.\n(아직은 열정만 가득한 코딩 초보 학생) 👩🏻‍🎓\n\n자기소개 순서는\n좋아하는 것, 전공, 성격의 장단점을 입니다.",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
                       color: const Color.fromARGB(255, 39, 65, 31),
                       height: 1.5,
+                    ),
+                  ),
+                ),
+              ),
+
+// 여백
+              const SizedBox(height: 20),
+
+//글씨
+              SizedBox(
+                  child: Text(
+                "What i",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: const Color.fromARGB(255, 39, 65, 31),
+                ),
+              )),
+//글씨 밑에 박스 글씨
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 20.0, vertical: 10.0),
+                child: Container(
+                  padding: const EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 144, 148, 143),
+                    borderRadius: BorderRadius.circular(20.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black12,
+                        spreadRadius: 2,
+                        blurRadius: 8,
+                        offset: Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Text(
+                    "저는 자연과 여행을 좋아합니다.🌎✈️",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w600,
+                      color: const Color.fromARGB(255, 39, 65, 31),
+                      height: 1.0,
                     ),
                   ),
                 ),
@@ -380,7 +423,7 @@ class JinPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Text("어릴 때부터 저는 하고 싶은 일이 많아서인지,\n현재도 하고 싶은 일을 하면서 즐기면서 살고 있습니다",
+                  child: Text("어릴 때부터 장난꾸러기, 하고 싶은게 많았고,\n현재도 하고 싶은 일을 하면서 즐기면서 살고 있습니다",
                     style: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w600,
@@ -400,7 +443,7 @@ class JinPage extends StatelessWidget {
                         child: ClipRRect(
                       borderRadius: BorderRadius.circular(10.0),
                       child: Image.asset(
-                        "assets/jin photo/PHOTO_0148.JPG",
+                        "assets/jin photo/F7EFF88F-A578-48ED-B1DB-E84AF0B51136_1_105_c.jpeg",
                         fit: BoxFit.cover,
                         height: 180.0,
                       ),
@@ -485,7 +528,7 @@ class JinPage extends StatelessWidget {
 // 여백
               const SizedBox(height: 20),
 // 성격의 장단점 "Strengths and weaknesses of personality"
-              SizedBox(child: Text("여기까지 입니다.\n감사합니다 😄",
+              SizedBox(child: Text("여기까지 입니다.\n감사합니다.",
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
