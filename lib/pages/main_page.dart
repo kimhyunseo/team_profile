@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:team_profile/pages/eunseong_page.dart';
+import 'jin_pages.dart';
 import 'hyunseo_page.dart';
 import 'yeonggwang_page.dart';
 
@@ -41,6 +42,12 @@ class MainPage extends StatelessWidget {
                     context,
                     MaterialPageRoute(builder: (_) => EunseongPage()),
                   );
+                case '박진':
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => JinPage()),
+                  );
+                  break;
               }
             },
           );
