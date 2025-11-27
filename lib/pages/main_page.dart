@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'jin_pages.dart';
 import 'hyunseo_page.dart';
 
 class MainPage extends StatelessWidget {
@@ -26,6 +27,12 @@ class MainPage extends StatelessWidget {
                   break;
                 // 들어오는 (members[index]) 값이 '김현서'일 경우 HyeonseoPage()로 이동
                 // 직접 연결하는 코드 작성해주세욤 ㅎㅎ
+                case '박진':
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => JinPage()),
+                  );
+                  break;
               }
             },
           );
