@@ -203,7 +203,7 @@ class JinPage extends StatelessWidget {
                     ],
                   ),
                   child: Text(
-                    "나는 박진, 30살입니다.\n(아직은 열정만 가득한 코딩 초보 학생) 👩🏻‍🎓\n\n자기소개 순서는\n좋아하는 것, 전공, 성격의 장단점을 입니다.\n저는 자연과 여행을 좋아합니다.🌎✈️",
+                    "나는 박진, 30살입니다.\n(아직은 열정만 가득한 코딩 초보 학생) 👩🏻‍🎓\n\n자기소개 순서는\n좋아하는 것, 전공, 성격의 장단점을 입니다.",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
