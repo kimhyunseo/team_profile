@@ -158,7 +158,7 @@ class SubHeadingBar extends StatelessWidget {
                 borderRadius: BorderRadiusGeometry.all(Radius.circular(8))),
             color: Color.fromARGB(128, 231, 137, 255)),
         child: Center(
-            child: Text("$subTitle",
+            child: Text(subTitle,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:team_profile/pages/eunseong_picture_page.dart';
-import 'package:team_profile/pages/hyunseo_page.dart';
+
 
 class EunseongPage extends StatelessWidget {
+  const EunseongPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

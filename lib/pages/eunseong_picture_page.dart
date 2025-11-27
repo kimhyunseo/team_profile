@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
 
 class EunseongPicturePage extends StatelessWidget {
-  final List<String> images = [
-    'assets/eunseong/korea1.jpeg',
-    'assets/eunseong/korea2.jpeg',
-    'assets/eunseong/korea3.jpeg',
-    'assets/eunseong/cat1.jpeg',
-    'assets/eunseong/cat2.jpeg',
-    'assets/eunseong/cat3.jpeg',
-    'assets/eunseong/bike1.jpeg',
-    'assets/eunseong/bike2.jpeg',
-    'assets/eunseong/bike3.jpeg',
-    'assets/eunseong/viet_nam1.jpeg',
-    'assets/eunseong/viet_nam2.jpeg',
-    'assets/eunseong/viet_nam3.jpeg',
-  ];
+  const EunseongPicturePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<String> images = [
+      'assets/eunseong/korea1.jpeg',
+      'assets/eunseong/korea2.jpeg',
+      'assets/eunseong/korea3.jpeg',
+      'assets/eunseong/cat1.jpeg',
+      'assets/eunseong/cat2.jpeg',
+      'assets/eunseong/cat3.jpeg',
+      'assets/eunseong/bike1.jpeg',
+      'assets/eunseong/bike2.jpeg',
+      'assets/eunseong/bike3.jpeg',
+      'assets/eunseong/viet_nam1.jpeg',
+      'assets/eunseong/viet_nam2.jpeg',
+      'assets/eunseong/viet_nam3.jpeg',
+    ];
     return Scaffold(
       appBar: AppBar(
         title: Text("사진"),
@@ -42,9 +43,7 @@ class EunseongPicturePage extends StatelessWidget {
                         builder: (_) => Dialog(
                               child: GestureDetector(
                                 onTap: () => Navigator.of(context).pop(),
-                                child: Container(
-                                  child: Image.asset(images[index]),
-                                ),
+                                child: Image.asset(images[index]),
                               ),
                             ));
                   },

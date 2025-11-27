@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class JinPage extends StatelessWidget {
+  const JinPage({super.key});
+
   @override
   
 // 상단바
@@ -159,30 +161,28 @@ class JinPage extends StatelessWidget {
 
 // 이모티콘 사진+글씨
               const SizedBox(height: 20),
-              Container(
-                child: Stack(alignment: Alignment.topCenter, children: [
-                  Image.asset(
-                    'assets/jin photo/hello.png',
-                    width: MediaQuery.of(context).size.width * 0.7,
-                    height: MediaQuery.of(context).size.width * 0.7,
-                    fit: BoxFit.cover,
-                  ),
-                  SizedBox(
-                    height: 280,
-                    child: Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Text(
-                        "Introducing Jin.",
-                        style: TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          color: const Color.fromARGB(255, 39, 65, 31),
-                        ),
+              Stack(alignment: Alignment.topCenter, children: [
+                Image.asset(
+                  'assets/jin photo/hello.png',
+                  width: MediaQuery.of(context).size.width * 0.7,
+                  height: MediaQuery.of(context).size.width * 0.7,
+                  fit: BoxFit.cover,
+                ),
+                SizedBox(
+                  height: 280,
+                  child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Text(
+                      "Introducing Jin.",
+                      style: TextStyle(
+                        fontSize: 28,
+                        fontWeight: FontWeight.bold,
+                        color: const Color.fromARGB(255, 39, 65, 31),
                       ),
                     ),
                   ),
-                ]),
-              ),
+                ),
+              ]),
 
 // 이모티콘 밑에 박스 글씨
               Padding(
@@ -195,7 +195,7 @@ class JinPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20.0),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
+                        color: Colors.black12,
                         spreadRadius: 2,
                         blurRadius: 8,
                         offset: Offset(0, 4),

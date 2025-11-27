@@ -35,6 +35,8 @@ class HyunseoPage extends StatelessWidget {
 }
 
 class HsProfile extends StatelessWidget {
+  const HsProfile({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -79,78 +81,68 @@ class HsProfile extends StatelessWidget {
 }
 
 class Bar extends StatelessWidget {
+  const Bar({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      child: Row(
-        children: [
-          Text('Lv 24', style: TextStyle(fontWeight: FontWeight.bold)),
-          SizedBox(
-            width: 10,
-          ),
-          Expanded(
-            child: LinearProgressIndicator(
-              value: 0.8, // 0.0 ~ 1.0
-              minHeight: 12,
-              backgroundColor: Colors.grey[300],
-              valueColor: AlwaysStoppedAnimation<Color>(Colors.blue[200]!),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class SkillList extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final double size = 45;
-
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        SvgPicture.asset(
-          'assets/hyunseo/Ai.svg',
-          width: size,
-          height: size,
+        Text('Lv 24', style: TextStyle(fontWeight: FontWeight.bold)),
+        SizedBox(
+          width: 10,
         ),
-        SvgPicture.asset(
-          'assets/hyunseo/Ps.svg',
-          width: size,
-          height: size,
+        Expanded(
+          child: LinearProgressIndicator(
+            value: 0.8,
+            minHeight: 12,
+            backgroundColor: Colors.grey[300],
+            valueColor: AlwaysStoppedAnimation<Color>(Colors.blue[200]!),
+          ),
         ),
-        SvgPicture.asset(
-          'assets/hyunseo/Figma.svg',
-          width: size,
-          height: size,
-        ),
-        SvgPicture.asset(
-          'assets/hyunseo/React.svg',
-          width: size,
-          height: size,
-        )
       ],
     );
   }
 }
 
-class GridImage extends StatelessWidget {
-  final List<String> images = [
-    'assets/hyunseo/hsprofile1_baseball.jpeg',
-    'assets/hyunseo/hsprofile2_majong.jpeg',
-    'assets/hyunseo/hsprofile3_meow.jpeg',
-    'assets/hyunseo/hsprofile4_animalcrossing.png',
-    'assets/hyunseo/hsprofile5_tamagotchi.jpeg',
-    'assets/hyunseo/hsprofile6_pikmin.png',
-    'assets/hyunseo/hsprofile7_splatoon.png',
-    'assets/hyunseo/hsprofile8_figure.jpeg',
-    'assets/hyunseo/figure9_art.jpeg',
-    'assets/hyunseo/figure10_we.png',
-  ];
+class SkillList extends StatelessWidget {
+  const SkillList({super.key});
 
   @override
   Widget build(BuildContext context) {
+    const double size = 45;
+    const skills = ['Ai', 'Ps', 'Figma', 'React'];
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: skills
+          .map((skill) => SvgPicture.asset(
+                'assets/hyunseo/$skill.svg',
+                width: size,
+                height: size,
+              ))
+          .toList(),
+    );
+  }
+}
+
+class GridImage extends StatelessWidget {
+  const GridImage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    const images = [
+      'assets/hyunseo/hsprofile1_baseball.jpeg',
+      'assets/hyunseo/hsprofile2_majong.jpeg',
+      'assets/hyunseo/hsprofile3_meow.jpeg',
+      'assets/hyunseo/hsprofile4_animalcrossing.png',
+      'assets/hyunseo/hsprofile5_tamagotchi.jpeg',
+      'assets/hyunseo/hsprofile6_pikmin.png',
+      'assets/hyunseo/hsprofile7_splatoon.png',
+      'assets/hyunseo/hsprofile8_figure.jpeg',
+      'assets/hyunseo/figure9_art.jpeg',
+      'assets/hyunseo/figure10_we.png',
+    ];
+
     return Expanded(
       child: GridView.builder(
         itemCount: images.length,
@@ -168,9 +160,7 @@ class GridImage extends StatelessWidget {
                   builder: (_) => Dialog(
                         child: GestureDetector(
                           onTap: () => Navigator.of(context).pop(),
-                          child: Container(
-                            child: Image.asset(images[index]),
-                          ),
+                          child: Image.asset(images[index]),
                         ),
                       ));
             },
