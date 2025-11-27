@@ -38,47 +38,53 @@ class _YeonggwangPage extends State<YeonggwangPage> {
             children: [
               Row(
                 children: [
-                  Image.asset('assets/yeonggwang/yg_photo.jpg',
-                      width: 200, height: 200, fit: BoxFit.scaleDown),
-                  Column(
-                    children: [
-                      Container(
-                          alignment: Alignment.topCenter,
-                          decoration: ShapeDecoration(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadiusGeometry.all(
-                                      Radius.circular(8))),
-                              color: Color.fromARGB(128, 138, 241, 255)),
-                          width: 170,
+                  Expanded(
+                    child: Image.asset('assets/yeonggwang/yg_photo.jpg',
+                        height: 200, fit: BoxFit.cover),
+                  ),
+                  SizedBox(width: 20),
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Container(
+                            margin: EdgeInsets.all(20),
+                            padding: EdgeInsets.all(10),
+                            alignment: Alignment.topCenter,
+                            decoration: ShapeDecoration(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadiusGeometry.all(
+                                        Radius.circular(8))),
+                                color: Color.fromARGB(128, 138, 241, 255)),
+                            height: 100,
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text("이름 : 김영광",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  Text("나이 : 27",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  Text("전공 : 컴퓨터공학",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                ])),
+                        SizedBox(
                           height: 100,
-                          child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("이름 : 김영광",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                                Text("나이 : 27",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                                Text("전공 : 컴퓨터공학",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                              ])),
-                      SizedBox(
-                        width: 100,
-                        height: 100,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.favorite,
-                                color: Color(0xFFFF0000), size: 24),
-                            SizedBox(width: 20),
-                            Text('$_counter', style: TextStyle(fontSize: 24))
-                          ],
-                        ),
-                      )
-                    ],
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Icon(Icons.favorite,
+                                  color: Color(0xFFFF0000), size: 24),
+                              SizedBox(width: 20),
+                              Text('$_counter', style: TextStyle(fontSize: 24))
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
