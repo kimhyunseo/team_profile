@@ -21,19 +21,18 @@ class MainPage extends StatelessWidget {
             onTap: () {
               switch (members[index]) {
                 // switch 문을 사용
-                case '김현서':
                 case '김영광':
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (_) => YeonggwangPage()),
                   );
                   break;
-                // case '김현서':
-                //   Navigator.push(
-                //     context,
-                //     MaterialPageRoute(builder: (_) => HeonseoPage()),
-                //   );
-                // break;
+                case '김현서':
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => HyunseoPage()),
+                  );
+                  break;
 
                 // 들어오는 (members[index]) 값이 '김현서'일 경우 HyeonseoPage()로 이동
                 // 직접 연결하는 코드 작성해주세욤 ㅎㅎ

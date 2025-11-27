@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:bubble/bubble.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class HyeonseoPage extends StatelessWidget {
-  const HyeonseoPage({super.key});
+class HyunseoPage extends StatelessWidget {
+  const HyunseoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
