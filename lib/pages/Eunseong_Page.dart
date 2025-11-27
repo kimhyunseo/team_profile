@@ -56,12 +56,13 @@ class EunseongPage extends StatelessWidget {
                           ),
                         ),
                         Container(
+                            width: double.infinity,
                             padding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 125),
-                            //symmetric > vertical : 세로 , horizontal : 가로
-                            margin: EdgeInsets.only(
-                              top: 15,
+                              vertical: 10,
                             ),
+                            //symmetric > vertical : 세로 , horizontal : 가로
+                            margin:
+                                EdgeInsets.only(top: 15, left: 50, right: 50),
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(10),
@@ -92,9 +93,11 @@ class EunseongPage extends StatelessWidget {
                               ],
                             )),
                         Container(
+                          width: double.infinity,
                           padding: EdgeInsets.symmetric(
-                              vertical: 10, horizontal: 85),
-                          margin: EdgeInsets.only(top: 15),
+                            vertical: 10,
+                          ),
+                          margin: EdgeInsets.only(top: 15, left: 50, right: 50),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               boxShadow: [
@@ -119,6 +122,7 @@ class EunseongPage extends StatelessWidget {
                           ),
                         ),
                         Container(
+                          height: 60,
                           padding: EdgeInsets.symmetric(
                               vertical: 0.5, horizontal: 0.5),
                           margin: EdgeInsets.only(top: 15, left: 50, right: 50),
@@ -134,8 +138,9 @@ class EunseongPage extends StatelessWidget {
                               ),
                             ],
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            padding: EdgeInsets.all(0),
                             children: [
                               textBox("Flutter", FlutterLogo()),
                               textBox(
@@ -164,6 +169,7 @@ class EunseongPage extends StatelessWidget {
                           ),
                         ),
                         Container(
+                          height: 60,
                           padding: EdgeInsets.symmetric(
                               vertical: 0.5, horizontal: 0.5),
                           margin: EdgeInsets.only(top: 15, left: 50, right: 50),
@@ -177,8 +183,9 @@ class EunseongPage extends StatelessWidget {
                                     spreadRadius: 5,
                                     offset: Offset(0, 0))
                               ]),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          child: ListView(
+                            scrollDirection: Axis.horizontal,
+                            padding: EdgeInsets.all(0),
                             children: [
                               textBox2("🚗 운전"),
                               textBox2("🗺️ 여행"),
@@ -229,9 +236,7 @@ class EunseongPage extends StatelessWidget {
   Container textBox(String text, Widget? image) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-      margin: EdgeInsets.symmetric(
-        vertical: 8,
-      ),
+      margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
       decoration: BoxDecoration(color: Colors.grey.shade300),
       child: Row(
         children: [
@@ -250,7 +255,7 @@ class EunseongPage extends StatelessWidget {
     // 이름 바꿀라면 f2 해서 바꾸면 위에도 같이 바뀜
     return Container(
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
-      margin: EdgeInsets.symmetric(vertical: 8),
+      margin: EdgeInsets.fromLTRB(5, 5, 5, 5),
       decoration: BoxDecoration(color: Colors.grey.shade300),
       child: Row(
         children: [
