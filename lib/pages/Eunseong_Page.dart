@@ -245,7 +245,7 @@ class EunseongPage extends StatelessWidget {
     );
   }
 
-// 암살자가 하나 있다.
+// 암살자가 나를 세번째 찔렀다.
   Container textBox2(String text) {
     // 이름 바꿀라면 f2 해서 바꾸면 위에도 같이 바뀜
     return Container(
